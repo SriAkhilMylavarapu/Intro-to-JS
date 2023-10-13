@@ -18,4 +18,13 @@ function checkResult(pChoice, cChoice) {
     else return ("You lose, " + cChoice + " beats " + pChoice);
 }
 
-console.log(checkResult(getplayerChoice(), getComputerChoice()));
+function game() {
+    let pChoice = getplayerChoice();
+    let cChoice = getComputerChoice();
+    console.log("You have chosen " + pChoice + ", The computer has chosen " + cChoice + "\n\n");
+    console.log(checkResult(pChoice, cChoice) + "\n\n");
+}
+
+for(let i = 0; i < 5; i++) {
+    game();
+}
